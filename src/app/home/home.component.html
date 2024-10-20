@@ -1,2 +1,17 @@
 
-  
+<div class="container">
+  <div *ngFor="let movie of movies">
+    <mat-card class="example-card" appearance="outlined">
+      <img mat-card-image [src]="[generateImageUrl(movie.id)]" alt="{{movie.name}}">  
+      <div class="second-half">
+        <mat-card-title class="title">
+          <h3>{{movie.name}}</h3>
+        </mat-card-title>
+      <mat-card-actions class="button-pos">
+        <a mat-button>LIKE</a>
+        <a mat-button>SHARE</a>
+    </mat-card-actions>
+      </div>
+</mat-card>
+    </div>
+<div>  <input matInput placeholder="Search Here" (keyup)="applyFilter($any($event.target).value)"></div>

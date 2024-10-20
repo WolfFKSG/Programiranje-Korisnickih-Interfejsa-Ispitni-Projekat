@@ -1,3 +1,19 @@
-.example-spacer {
-    flex: 1 1 auto;
-  }
+.loading-card {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.second-half {
+    height: 200px;
+    justify-content: center;
+    gap: 50px;
+}
+
+.title {
+    height: 100px;
+}
+
+.button-pos {
+    margin-top: 20px;
+}
