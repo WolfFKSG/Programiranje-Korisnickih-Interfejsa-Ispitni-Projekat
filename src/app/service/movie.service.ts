@@ -163,7 +163,56 @@ public dummyMovieList: Array<MovieModel> = [
       startsAt: '25.12.2024',
       price: '10',
       rating:   83     
-}
+}, 
+  {
+      id: 11,
+      name: "Inception",
+      genre: ["Action", "Science Fiction"],
+      duration: "2:28",
+      director: "Christopher Nolan",
+      actor: ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
+      releasedAt: "16/07/2010",
+      startsAt: "25.10.2024",
+      price: "15",
+      rating: 86
+  },
+  {
+      id: 12,
+      name: "The Matrix",
+      genre: ["Action", "Science Fiction"],
+      duration: "2:16",
+      director: "Lana Wachowski, Lilly Wachowski",
+      actor: ["Keanu Reeves", "Carrie-Anne Moss"],
+      releasedAt: "31/03/1999",
+      startsAt: "25.10.2024",
+      price: "10",
+      rating: 87
+  },
+  {
+      id: 13,
+      name: "Jurassic Park",
+      genre: ["Adventure", "Science Fiction"],
+      duration: "2:07",
+      director: "Steven Spielberg",
+      actor: ["Sam Neill", "Laura Dern"],
+      releasedAt: "11/06/1993",
+      startsAt: "25.10.2024",
+      price: "8",
+      rating: 91
+  },
+  {
+      id: 14,
+      name: "The Lion King",
+      genre: ["Animated", "Adventure"],
+      duration: "1:58",
+      director: "Roger Allers, Rob Minkoff",
+      actor: ["Matthew Broderick", "James Earl Jones"],
+      releasedAt: "15/06/1994",
+      startsAt: "25.10.2024",
+      price: "10",
+      rating: 88
+  }
+
 ]
 
 }

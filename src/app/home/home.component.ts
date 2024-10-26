@@ -32,15 +32,4 @@ export class HomeComponent{
     return `/assets/images/${id}.png`
   }
 
-
-  applyFilter(filterValue:string){
-    const lowerCaseFilterValue = filterValue.trim().toLowerCase();
-    this.movies = this.movies.filter(movie => 
-      movie.name.toLowerCase().includes(lowerCaseFilterValue)
-    );
-    if( lowerCaseFilterValue == '') 
-      this.movies = this.movieService.dummyMovieList
-  }
-
-
 }
