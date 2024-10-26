@@ -6,9 +6,7 @@ import { MovieModel } from "../models/movie.model";
 })
 
 export class MovieService {
-  static getAllMovies(): MovieModel[] {
-    throw new Error('Method not implemented.');
-  }
+ 
 
     private static instance: MovieService
 
@@ -34,13 +32,13 @@ public getMovieId(id: number) {
   })
 }
 
+public getSpecificMovie(id:number){
+  return this.dummyMovieList.find(movie => movie.id == id);
+}
+
 public getMovieName(movie: MovieModel){
   return movie.name
 }
-
-// public filterMovies(movies: MovieModel, words:string[]):MovieModel[] {
-//   return movies.filter
-// }
 
 
 public dummyMovieList: Array<MovieModel> = [
@@ -211,6 +209,18 @@ public dummyMovieList: Array<MovieModel> = [
       startsAt: "25.10.2024",
       price: "10",
       rating: 88
+  },
+  {
+      id: 15,
+      name: "Cars",
+      genre: ["Animated", "Adventure"],
+      duration: "1:57",
+      director: "John Lasseter",
+      actor: ["Owen Wilson", "Bonnie Hunt"],
+      releasedAt: "09/06/2006",
+      startsAt: "25.10.2024",
+      price: "10",
+      rating: 74
   }
 
 ]

@@ -24,12 +24,10 @@ export class HomeComponent{
   constructor(private movieService: MovieService) {
     this.movies = this.movieService.dummyMovieList
   }
-  // ngOnInit(): void {
-  //   this.dataService.
-  // }
-  
+
   public generateImageUrl(id: number) {
     return `/assets/images/${id}.png`
   }
+
 
 }

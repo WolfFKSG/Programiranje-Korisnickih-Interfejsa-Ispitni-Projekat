@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: linear-gradient(#a5c0ff, white);
+    background-repeat: no-repeat;
+
+}
 
 .container {
     margin-top: 30px;
@@ -19,3 +23,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .search {
 margin-left: 200px;
 }    
+

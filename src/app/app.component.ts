@@ -10,7 +10,7 @@ import { MovieModel } from './models/movie.model';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [RouterOutlet, RouterLink, MatToolbarModule, MatButtonModule, MatIconModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
