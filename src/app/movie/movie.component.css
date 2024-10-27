@@ -1,4 +1,73 @@
+
 .movie_bg {
     height: 600px;
-    background-color: #648ef1;
+    flex: 1 1 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.column {
+    height: 500px;
+    padding:25px;
+
+    
+}
+
+.inner {
+    display: flex;
+    flex-wrap:wrap;
+    object-fit: contain;
+    justify-content: center;
+    gap: 5%;
+}
+
+.movie_wrap img{
+    flex: 1 1 20%;
+    max-height: 550px;
+    border-radius: 10px;
+    border: 2px solid #969caa;
+    margin-bottom: 10%;
+}
+
+.movie_text {
+    flex:1 1 30%;
+    text-align: center;
+}
+
+.movie_card {
+    background-color: #a0bbfc;
+    margin-bottom: 50px;
+}
+
+.movie_title {
+    justify-content: center;
+    border-bottom: 2px solid #969caa;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.movie_desc {
+    margin-top: 10px;
+}
+
+
+.movie_genre, .movie_duration, .movie_director, .movie_actors, .movie_date, .movie_score{
+    margin-top: 20px;
+}
+
+.movie_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20%;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+p {
+    text-align: left;
+    margin: 5px;
 }

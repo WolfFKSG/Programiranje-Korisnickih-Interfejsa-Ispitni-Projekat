@@ -9,7 +9,8 @@ export interface MovieModel {
     releasedAt: string,
     startsAt: string,
     price: string,
-    rating: number
+    rating: number,
+    description: string
 
 }
 

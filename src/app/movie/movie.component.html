@@ -1,18 +1,62 @@
 <div class="movie_bg">
     <div class="column">
         <div class="inner">
-            <div class="movie_wrap" >
-            <img [src]="[generateImageUrl()]" alt="">
+            <div class="movie_wrap">
+                <img [src]="[generateImageUrl()]" alt="{{movie?.name}}">
 
             </div>
-            <div class="movie_desc">
-                <div class="movie_name">
-                    <h4>{{movie?.name}}</h4>
-                </div>
-                <div class="movie_about">
-                    <h5>Kratak opis filma</h5>
-                </div>
-
+            <div class="movie_text">
+                <mat-card class="movie_card" appearance="outlined">
+                    <mat-card-header class="movie_title">
+                      <mat-card-title class="bold">{{movie?.name}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="movie_desc">
+                        <p class="bold">Description: </p>
+                        <p>{{movie?.description}}</p>
+                    </mat-card-content>
+                        <mat-card-content class="movie_genre">
+                            <p class="bold">Genre:</p>
+                            <p>{{movie?.genre?.join(', ')}}</p>
+                        </mat-card-content>
+                        <mat-card-content class="movie_director">
+                            <p class="bold">Director:</p>
+                            <p>{{movie?.director}}</p>
+                        </mat-card-content>
+                        <mat-card-content class="movie_actors">
+                            <p class="bold">Actors:</p>
+                            <p>{{movie?.actor?.join(', ')}}</p>
+                        </mat-card-content>
+                        <mat-card-content class="movie_duration">
+                            <p class="bold">Runtime:</p>
+                            <p>{{movie?.duration}} hours</p>
+                        </mat-card-content>
+                        <mat-card-content class="movie_duration">
+                            <p class="bold">Released:</p>
+                            <p>{{movie?.releasedAt}}</p>
+                        </mat-card-content>
+                        <mat-card-content class="movie_score">
+                            <p class="bold">Score:</p>
+                                <p>{{movie?.rating}}</p>
+                        </mat-card-content>
+                        <mat-card-content class="movie_buttons">
+                            <div>
+                                <p class="bold">Projection Date:</p>
+                                <p>{{movie?.startsAt}}</p>
+                            </div>
+                            <div>
+                                <p class="bold">Price:</p>
+                                <p>{{movie?.price}} $</p>
+                            </div>
+                            <div>
+                                <a mat-button type="button" >
+                                    Reserve
+                                </a>
+                            </div>
+                            
+                            
+                        </mat-card-content>
+                    
+                </mat-card>
             </div>
         </div>
     </div>

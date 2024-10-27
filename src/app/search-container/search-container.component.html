@@ -1,0 +1,62 @@
+<div>
+    <mat-card appearance="outlined" class="search-card">
+        <mat-card-content>
+            <h1>Search for your destination</h1>
+            <form class="search-form">
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Movie Title</mat-label>
+                    <mat-select [(value)]="selectedName">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getAllMovies()">{{movie.name}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Genre</mat-label>
+                    <mat-select [(value)]="selectedGenre">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getGenre()">{{movie}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Duration</mat-label>
+                    <mat-select [(value)]="selectedDuration">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getAllMovies()">{{movie.duration}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Director</mat-label>
+                    <mat-select [(value)]="selectedDirector">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getDirector()">{{movie}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Actor</mat-label>
+                    <mat-select [(value)]="selectedActor">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getActors()">{{movie}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Release date</mat-label>
+                    <mat-select [(value)]="selectedRelease">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getAllMovies()">{{movie.releasedAt}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Starting Date</mat-label>
+                    <mat-select [(value)]="selectedStarts">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getAllMovies()">{{movie.startsAt}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="search-field">
+                    <mat-label>Choose Rating</mat-label>
+                    <mat-select [(value)]="selectedRating">
+                        <mat-option [value]="movie" *ngFor="let movie of movieService.getAllMovies()">{{movie.rating}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+      </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button type="button" (click)="doSearch()">
+                <i class="fa-solid fa-search"></i> Search now
+            </button>
+        </mat-card-actions>
+    </mat-card>
+  </div>

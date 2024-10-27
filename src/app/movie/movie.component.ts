@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MovieService } from '../service/movie.service';
 import { MovieModel } from '../models/movie.model';
+import { MatCardModule } from '@angular/material/card';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-movie',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MatCardModule, MatButtonModule],
   templateUrl: './movie.component.html',
   styleUrl: './movie.component.css'
 })

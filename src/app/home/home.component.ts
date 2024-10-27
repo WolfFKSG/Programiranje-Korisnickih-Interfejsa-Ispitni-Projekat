@@ -9,11 +9,12 @@ import { MatListModule } from '@angular/material/list';
 import { MovieService } from '../service/movie.service';
 import { MovieModel } from '../models/movie.model';
 import { MatCardImage } from '@angular/material/card';
+import { SearchContainerComponent } from "../search-container/search-container.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule,NgFor,NgIf,MatCardModule,RouterLink,MatListModule, MatCardImage,],
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, NgFor, NgIf, MatCardModule, RouterLink, MatListModule, MatCardImage, SearchContainerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
