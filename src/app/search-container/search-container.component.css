@@ -1,0 +1,17 @@
+.search-card {
+    background-color: #8dafff;
+}
+.card {
+    padding: 1%;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-mov {
+    display: block;
+    margin: auto;
+}
