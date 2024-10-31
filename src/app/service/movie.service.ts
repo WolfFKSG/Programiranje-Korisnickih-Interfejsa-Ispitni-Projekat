@@ -25,12 +25,20 @@ public getAllMovies() {
   return this.dummyMovieList;
 }
 
-public getMovieId(id: number) {
+public getMovieId(id: number){
   var movieId: MovieModel;
   this.dummyMovieList.forEach(movie => {
     if( movie.id == id)
       movieId = movie;
   })
+}
+
+public getSpecMovieId(ids: number[]): Observable<{content: MovieModel[]}> {
+  const movid: MovieModel[] = this.dummyMovieList.filter(
+    movie => ids.includes(movie.id))
+    return of ({
+      content: movid
+    })
 }
 
 public getActors() {
@@ -77,14 +85,13 @@ public getMovieName(movie: MovieModel){
 }
 
 public getSpecificSearchMovie(name: string): Observable<{content: MovieModel[]}> {
-  console.log('Type of name:', typeof name); // Log the type
-  console.log('Value of name:', name); // Log the value
   const specmov = this.dummyMovieList.filter(
     movie => movie.name == name)
   return of ({
     content: specmov
   })
 }
+
 
 public getSearchCriteria():SearchModel {
   if(!sessionStorage.getItem('search'))
