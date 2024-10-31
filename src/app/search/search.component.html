@@ -1,1 +1,26 @@
-<p>search works!</p>
+<app-search-container (onSearch)="doSearch()" />
+<div class="mat-elevation-z8 table-wrapper" *ngIf="data">
+    <mat-card appearance="outlined" *ngIf="dataSource">
+        <mat-card-content>
+            <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+
+                <!-- Movie Name -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Movie Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <!-- Movie Genre -->
+                <ng-container matColumnDef="genre">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Movie Genre </th>
+                    <td mat-cell *matCellDef="let element"> {{element.genre}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+       
+        </mat-card-content>
+    </mat-card>
+</div>

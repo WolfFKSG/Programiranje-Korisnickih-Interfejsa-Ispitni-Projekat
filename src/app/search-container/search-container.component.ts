@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -16,7 +16,7 @@ import { MovieService } from '../service/movie.service';
   templateUrl: './search-container.component.html',
   styleUrl: './search-container.component.css'
 })
-export class SearchContainerComponent{
+export class SearchContainerComponent implements OnInit{
   
   @Output() onSearch: EventEmitter<any> = new EventEmitter()
   public selectedName: string | null
@@ -47,6 +47,11 @@ export class SearchContainerComponent{
     this.selectedRating = criteria.rating
     this.selectedPrice = criteria.price
   }
+  
+  ngOnInit() {
+    this.movieList =  this.movieService.getAllMovies().map(movie => movie.name)
+    }
+  
   
   // ngOnInit(): void {
   //   this.movieService.getSpecificMovie().subscribe()

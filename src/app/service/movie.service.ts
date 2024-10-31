@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { MovieModel } from "../models/movie.model";
 import { SearchModel } from "../models/search.model";
+import { Observable, of } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -75,18 +76,28 @@ public getMovieName(movie: MovieModel){
   return movie.name
 }
 
+public getSpecificSearchMovie(name: string): Observable<{content: MovieModel[]}> {
+  console.log('Type of name:', typeof name); // Log the type
+  console.log('Value of name:', name); // Log the value
+  const specmov = this.dummyMovieList.filter(
+    movie => movie.name == name)
+  return of ({
+    content: specmov
+  })
+}
+
 public getSearchCriteria():SearchModel {
   if(!sessionStorage.getItem('search'))
     sessionStorage.setItem('search', JSON.stringify({
-      Name: null,
-      Genre:  null,
-      Duration: null,
-      Director: null,
-      Actor: null,
-      Release: null,
-      Starts:  null,
-      Rating:  null,
-      Price: null
+      name: null,
+      genre:  null,
+      duration: null,
+      director: null,
+      actor: null,
+      release: null,
+      starts:  null,
+      rating:  null,
+      price: null
       }))
       return JSON.parse(sessionStorage.getItem('search')!)
 }
