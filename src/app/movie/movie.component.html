@@ -48,8 +48,9 @@
                                 <p>{{movie?.price}} $</p>
                             </div>
                             <div>
-                                <a mat-button type="button" >
-                                    Reserve
+                                <a mat-button [routerLink]="['/book/',movie?.id]">
+                                    <i class="fa-solid fa-up-right-from-square"></i>Book now
+                                    
                                 </a>
                             </div>
                             

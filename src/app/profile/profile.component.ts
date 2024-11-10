@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
   public movieService: MovieService
   public active: UserModel | null = null
 
-  public displayedColumns: string[] = ['flightNumber', 'destination', 'scheduledAt', 'estimatedAt', 'plane', 'gate', 'rating'];
+  public displayedColumns: string[] = ['name', 'genre', 'director', 'actor', 'duration', 'release', 'starts', 'rating'];
   public dataSource: MatTableDataSource<BookedModel> | null = null
   @ViewChild(MatSort)
   sort: MatSort = new MatSort;

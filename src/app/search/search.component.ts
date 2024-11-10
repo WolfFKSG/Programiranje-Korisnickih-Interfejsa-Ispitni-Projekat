@@ -35,7 +35,7 @@ export class SearchComponent implements OnInit{
       this.loadTableData(criteria.name)
   }
 
-  public displayedColumns: string[] = ['name' ,'genre' ,'director', 'actor', 'duration', 'release', 'starts', 'rating' ];
+  public displayedColumns: string[] = ['name' ,'genre' ,'director', 'actor', 'duration', 'release', 'starts', 'rating', 'action' ];
   public dataSource: MatTableDataSource<MovieModel> | null = null
   @ViewChild(MatPaginator) paginator: MatPaginator | null = null
   @ViewChild(MatSort)
