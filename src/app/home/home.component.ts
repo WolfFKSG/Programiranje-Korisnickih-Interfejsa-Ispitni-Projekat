@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -10,6 +10,7 @@ import { MovieService } from '../service/movie.service';
 import { MovieModel } from '../models/movie.model';
 import { MatCardImage } from '@angular/material/card';
 import { SearchContainerComponent } from "../search-container/search-container.component";
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,7 @@ export class HomeComponent{
 
   public movies: MovieModel[]
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService, private userService: UserService) {
     this.movies = this.movieService.dummyMovieList
   }
 
@@ -30,5 +31,8 @@ export class HomeComponent{
     return `/assets/images/${id}.png`
   }
 
-
+  public bookMovie(movie: MovieModel) {
+    this.userService.addToBooked(movie);
+  }
+  
 }

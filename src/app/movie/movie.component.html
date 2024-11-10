@@ -48,7 +48,7 @@
                                 <p>{{movie?.price}} $</p>
                             </div>
                             <div>
-                                <a mat-button [routerLink]="['/book/',movie?.id]">
+                                <a mat-button (click)="bookMovie()">
                                     <i class="fa-solid fa-up-right-from-square"></i>Book now
                                     
                                 </a>

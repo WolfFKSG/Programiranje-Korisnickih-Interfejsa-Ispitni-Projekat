@@ -1,0 +1,12 @@
+.profile-card {
+
+    background-color: #a0bbfc;
+    margin-bottom: 50px;
+}
+
+
+.search-field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

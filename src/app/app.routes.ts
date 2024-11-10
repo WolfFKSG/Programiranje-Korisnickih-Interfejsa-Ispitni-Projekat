@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
 
 export const routes: Routes = [
 
@@ -16,7 +17,7 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'signup', component: SignupComponent},
     { path: 'profile', component: ProfileComponent},
-
+    { path: 'cart', component: CartComponent},
     { path: '**', redirectTo: ''}
 
 ];

@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { UserModel, ReviewModel } from "../models/user.model";
+import { UserModel, ReviewModel, BookedModel } from "../models/user.model";
+import { MovieModel } from "../models/movie.model";
 
 @Injectable({
     providedIn: 'root'
@@ -94,6 +95,7 @@ export class UserService {
         localStorage.setItem('users', JSON.stringify(all))
     }
 
+
     public updateUser(model: UserModel) {
         var all = this.retrieveAllUsers()
         for (let i = 0; i < all.length; i++) {
@@ -108,4 +110,46 @@ export class UserService {
         sessionStorage.removeItem('active')
     }
 
+    public addToBooked(movie: MovieModel) {
+        const currentUser = this.getCurrentUser()
+        const alreadyBooked = currentUser.booked.some(booked => booked.movie?.id === movie.id)
+        
+        if (!alreadyBooked) {
+            const newBooked: BookedModel = {
+                id: movie.id,
+                movie: movie,
+                review: ReviewModel.NONE
+            }
+            currentUser.booked.push(newBooked)
+            alert('Movie sucessfully added')
+            
+            const allUsers = this.retrieveAllUsers()
+            const updatedUsers = allUsers.map(user => {
+                if (user.email === currentUser.email) {
+                    return { ...user, booked: currentUser.booked }
+                }
+                return user
+            });
+
+            localStorage.setItem('users', JSON.stringify(updatedUsers))
+        } else {
+            alert('Movie is already added ')
+        }
+    }
+
+    public removeBooked(movieId: number) {
+        const currentUser = this.getCurrentUser()
+        const alreadyBooked = currentUser.booked.filter(booked => booked.movie?.id === movieId)
+
+        const allUsers = this.retrieveAllUsers()
+        const updatedUsers = allUsers.map(user => {
+        if (user.email === currentUser.email) {
+            return { ...user, booked: currentUser.booked }
+      }
+      return user
+    })
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
+    alert('Movie successfully removed')
+
+    }
 }
