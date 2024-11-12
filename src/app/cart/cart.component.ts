@@ -22,6 +22,7 @@ export class CartComponent implements OnInit{
   private userService: UserService
   public movieService: MovieService
   public active: UserModel | null = null
+  public totalPrice: number
 
   public displayedColumns: string[] = ['name', 'genre', 'director', 'actor', 'duration', 'release', 'starts', 'rating', 'remove'];
   public dataSource: MatTableDataSource<BookedModel> | null = null
@@ -31,6 +32,7 @@ export class CartComponent implements OnInit{
   constructor(private router: Router, private route: ActivatedRoute) {
     this.userService = UserService.getInstance()
     this.movieService = MovieService.getInstance()
+    this.totalPrice = this.userService.calculatePrice()
   }
 
   ngOnInit(): void {
@@ -124,7 +126,12 @@ export class CartComponent implements OnInit{
       this.active.booked = this.active.booked.filter(booked => booked.id !== id);
       this.dataSource = new MatTableDataSource<BookedModel>(this.active.booked);
       this.dataSource.sort = this.sort;
+    
     }
+  }
+
+  public getTotalPrice() {
+    return this.totalPrice
   }
 
 }

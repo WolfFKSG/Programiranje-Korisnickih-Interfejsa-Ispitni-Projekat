@@ -70,10 +70,13 @@
                         </button>
                     </td>
                 </ng-container>
-
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
+            <hr>
         </mat-card-content>
+
+        <div class="price">Total price: {{getTotalPrice()}} $</div>
+            
     </mat-card>
 </div>

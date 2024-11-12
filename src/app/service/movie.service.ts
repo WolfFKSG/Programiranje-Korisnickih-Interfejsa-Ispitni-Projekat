@@ -124,7 +124,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Daniel Radcliffe", "Emma Watson"],
       releasedAt: '16/11/2001',
       startsAt: '25.10.2024',
-      price: '10',
+      price: 10,
       rating: 79, 
       description: 'A young boy discovers he is a wizard on his 11th birthday and begins attending Hogwarts School of Witchcraft and Wizardry, where he uncovers his magical heritage and faces dark forces.' 
 },
@@ -137,7 +137,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Chris Evans", "Robert Downey Jr."],
       releasedAt:"04/05/2012" ,
       startsAt: '18.10.2024',
-      price: '11',
+      price: 11,
       rating:  77,
       description: 'Earth’s mightiest heroes, including Iron Man, Thor, and Captain America, come together to stop Loki and his alien army from invading Earth, forming an iconic superhero team.'
 },
@@ -150,7 +150,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Elijah Wood", "Ian McKellen"],
       releasedAt: '17/12/2003',
       startsAt: '22.11.2024',
-      price: '5',
+      price: 5,
       rating:  85,
       description: "In the epic conclusion of the trilogy, Frodo and Sam reach Mount Doom to destroy the One Ring, while Aragorn must unite the kingdoms of men to face Sauron's final assault."
 },
@@ -163,7 +163,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Liam Hemsworth", "Lena Headey"],
       releasedAt:'11/10/2024' ,
       startsAt: '11.10.2024',
-      price: '15',
+      price: 15,
       rating: 59,
       description: 'A travel documentary series that explores unique cultures and breathtaking landscapes around the world, showcasing the beauty and diversity of our planet through personal stories and adventures.'
 },
@@ -176,7 +176,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Laura Dern", "Ethan Hawke"],
       releasedAt: '6/6/2013' ,
       startsAt: '25.12.2024',
-      price: '10',
+      price: 10,
       rating:  63,
       description: 'In a dystopian future where all crime is legal for one night each year, a family must defend themselves from intruders during the annual Purge, testing their morals and survival instincts.'      
 },
@@ -189,7 +189,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Daniel Radcliffe", "Emma Watson"],
       releasedAt: '12/7/2007',
       startsAt: '23.12.2024',
-      price: '8',
+      price: 8,
       rating:  77,
       description: "Harry returns to Hogwarts amidst rising darkness, forming a secret group to combat Voldemort's return while facing bureaucratic obstacles and personal challenges."      
 },
@@ -202,7 +202,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Daniel Radcliffe", "Emma Watson"],
       releasedAt: "15/7/2009" ,
       startsAt: '24.12.2024',
-      price: '8',
+      price: 8,
       rating:  77,
       description: 'As Voldemort’s power grows, Harry and Dumbledore delve into the dark past of the Dark Lord to find a way to defeat him, while personal relationships evolve at Hogwarts.'      
 },
@@ -215,7 +215,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Elijah Wood", "Ian McKellen"],
       releasedAt: "19/12/2001",
       startsAt: '20.11.2024',
-      price: '5',
+      price: 5,
       rating:  84,
       description: 'A young hobbit, Frodo, is entrusted with a powerful ring that must be destroyed. He forms a fellowship with diverse allies to embark on a perilous journey across Middle-earth.'      
 },
@@ -228,7 +228,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Elijah Wood", "Ian McKellen"],
       releasedAt: "18/12/2002",
       startsAt: "21.11.2024",
-      price: '5',
+      price: 5,
       rating:  84,
       description: 'The fellowship is divided as they face new threats; Frodo and Sam continue towards Mordor, while Aragorn, Legolas, and Gimli battle against Saruman’s forces.'      
 },
@@ -241,7 +241,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Robert Downey Jr.", "Chris Evans"],
       releasedAt: "24/4/2019",
       startsAt: '25.12.2024',
-      price: '10',
+      price: 10,
       rating:   83,
       description: 'After the devastating events of Infinity War, the surviving Avengers unite for a final battle against Thanos, seeking to reverse the destruction he caused and restore balance to the universe.'     
 }, 
@@ -254,7 +254,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
       releasedAt: "16/07/2010",
       startsAt: "25.10.2024",
-      price: "15",
+      price: 15,
       rating: 86,
       description: 'A skilled thief who specializes in corporate espionage by infiltrating dreams is given a chance to have his criminal past erased if he can successfully plant an idea in a target’s subconscious.'
   },
@@ -267,7 +267,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Keanu Reeves", "Carrie-Anne Moss"],
       releasedAt: "31/03/1999",
       startsAt: "25.10.2024",
-      price: "10",
+      price: 10,
       rating: 87,
       description: 'A computer hacker discovers that reality is a simulated construct created by sentient machines. He joins a rebellion to fight against the machines and uncover the truth about his existence.'
   },
@@ -280,7 +280,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Sam Neill", "Laura Dern"],
       releasedAt: "11/06/1993",
       startsAt: "25.10.2024",
-      price: "8",
+      price: 8,
       rating: 91,
       description: 'A theme park populated by cloned dinosaurs faces disaster when the creatures escape and wreak havoc, forcing its creators and visitors to fight for survival in a prehistoric world.'
   },
@@ -293,7 +293,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Matthew Broderick", "James Earl Jones"],
       releasedAt: "15/06/1994",
       startsAt: "25.10.2024",
-      price: "10",
+      price: 10,
       rating: 88,
       description: 'Young lion cub Simba struggles to accept his royal destiny after the death of his father, Mufasa. He embarks on a journey of self-discovery and redemption to reclaim his rightful place as king.'
   },
@@ -306,7 +306,7 @@ public dummyMovieList: Array<MovieModel> = [
       actor: ["Owen Wilson", "Bonnie Hunt"],
       releasedAt: "09/06/2006",
       startsAt: "25.10.2024",
-      price: "10",
+      price: 10,
       rating: 74,
       description: 'A race car named Lightning McQueen finds himself stranded in a small town and learns valuable life lessons about friendship and humility while trying to get back to the racing circuit.'
   }

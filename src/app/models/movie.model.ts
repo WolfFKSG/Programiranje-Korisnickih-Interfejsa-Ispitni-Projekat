@@ -8,7 +8,7 @@ export interface MovieModel {
                 | 'Keanu Reeves'| 'Carrie-Anne Moss' | 'Sam Neill' |'Laura Dern' | 'Matthew Broderick' | 'James Earl Jones' | 'Owen Wilson' | 'Bonnie Hunt'>,
     releasedAt: string,
     startsAt: string,
-    price: string,
+    price: number,
     rating: number,
     description: string
 

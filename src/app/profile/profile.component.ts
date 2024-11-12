@@ -21,6 +21,7 @@ export class ProfileComponent implements OnInit {
   private userService: UserService
   public movieService: MovieService
   public active: UserModel | null = null
+  public totalPrice: number = 0
 
   public displayedColumns: string[] = ['name', 'genre', 'director', 'actor', 'duration', 'release', 'starts', 'rating'];
   public dataSource: MatTableDataSource<BookedModel> | null = null
@@ -35,6 +36,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     try {
       this.active = this.userService.getCurrentUser()
+      this.totalPrice = this.userService.calculatePrice()
 
       if (this.active.booked.length == 0) return
       const ids = this.active.booked.map(obj => obj.id)
@@ -158,5 +160,9 @@ export class ProfileComponent implements OnInit {
     }
 
     this.userService.updateUser(this.active!)
+  }
+
+  public getTotalPrice() {
+    return this.totalPrice
   }
 }

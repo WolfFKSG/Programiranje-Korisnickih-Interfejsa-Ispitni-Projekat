@@ -54,9 +54,11 @@
                 </ng-container>
                 <ng-container>
                     <button matColumnDef="remove">
-                        <th mat-header-cell *matHeaderCellDef> Remove movie </th>
+                        <th mat-header-cell *matHeaderCellDef> Remove </th>
                         <td mat-cell *matCellDef="let element">
-                        <button type="button" mat-button (click)="removeMovie(element.id)"></button>
+                        <button type="button" mat-button (click)="removeMovie(element.id)">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </button>   
                
                 </ng-container>
@@ -65,5 +67,8 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
         </mat-card-content>
+
+        <div class="price">Total price: {{getTotalPrice()}} $</div>
+            
     </mat-card>
 </div>
