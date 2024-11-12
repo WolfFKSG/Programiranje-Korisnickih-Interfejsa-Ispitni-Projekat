@@ -152,6 +152,7 @@ export class UserService {
       localStorage.setItem('users', JSON.stringify(updatedUsers));
 
       alert('Movie successfully removed');
+
     }
   }
 

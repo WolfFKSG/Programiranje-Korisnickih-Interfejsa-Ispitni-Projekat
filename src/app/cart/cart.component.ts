@@ -52,6 +52,7 @@ export class CartComponent implements OnInit{
 
         this.dataSource = new MatTableDataSource<BookedModel>(this.active!.booked)
         this.dataSource.sort = this.sort;
+        this.updatePrice()
       })
     } catch (e) {
       this.router.navigate(['/login'], {
@@ -126,7 +127,7 @@ export class CartComponent implements OnInit{
       this.active.booked = this.active.booked.filter(booked => booked.id !== id);
       this.dataSource = new MatTableDataSource<BookedModel>(this.active.booked);
       this.dataSource.sort = this.sort;
-    
+      this.updatePrice()
     }
   }
 
@@ -134,5 +135,8 @@ export class CartComponent implements OnInit{
     return this.totalPrice
   }
 
+  public updatePrice() {
+    this.totalPrice = this.userService.calculatePrice()
+  }
 }
 
