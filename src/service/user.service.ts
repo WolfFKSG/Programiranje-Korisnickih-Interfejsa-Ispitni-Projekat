@@ -166,4 +166,9 @@ export class UserService {
     }, 0)
     return totalPrice
   }
+
+  public bookMovie(movie: MovieModel) {
+    this.addToBooked(movie);
+  }
+  
 }

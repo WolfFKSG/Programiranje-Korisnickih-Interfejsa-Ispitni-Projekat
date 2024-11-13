@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { UserService } from '../service/user.service';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-login',

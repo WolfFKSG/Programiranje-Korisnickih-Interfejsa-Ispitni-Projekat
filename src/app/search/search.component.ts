@@ -9,9 +9,10 @@ import { SearchContainerComponent } from '../search-container/search-container.c
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
-import { MovieService } from '../service/movie.service';
-import { MovieModel } from '../models/movie.model';
-import { PageModel } from '../models/page.model';
+import { MovieService } from '../../service/movie.service';
+import { MovieModel } from '../../models/movie.model';
+import { PageModel } from '../../models/page.model';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-search',
@@ -23,10 +24,12 @@ import { PageModel } from '../models/page.model';
 export class SearchComponent implements OnInit{
 
   public movieService: MovieService
+  public userService: UserService
   public data: PageModel<MovieModel> | null = null
 
   constructor () {
     this.movieService = MovieService.getInstance()
+    this.userService = UserService.getInstance()
   }
 
   ngOnInit(): void {
@@ -69,4 +72,5 @@ export class SearchComponent implements OnInit{
   public announceSortChange(sortState: Sort) {
     return
   }
+
 }

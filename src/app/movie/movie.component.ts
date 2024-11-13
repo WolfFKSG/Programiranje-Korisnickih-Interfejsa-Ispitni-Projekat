@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { MovieService } from '../service/movie.service';
-import { MovieModel } from '../models/movie.model';
+import { MovieService } from '../../service/movie.service';
+import { MovieModel } from '../../models/movie.model';
 import { MatCardModule } from '@angular/material/card';
 import { MatButton, MatButtonModule } from '@angular/material/button';
-import { UserService } from '../service/user.service';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-movie',

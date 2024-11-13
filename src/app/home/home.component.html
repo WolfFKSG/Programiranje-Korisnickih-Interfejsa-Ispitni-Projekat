@@ -11,7 +11,7 @@
       <mat-card-actions class="button-pos">
         <a mat-button [routerLink]="['/movie/',movie.id]">
           <i class="fa-solid fa-circle-info"></i>Details</a>
-          <a mat-button (click)="bookMovie(movie)">
+          <a mat-button (click)="userService.bookMovie(movie)">
             <i class="fa-solid fa-up-right-from-square"></i> Book now
         </a>
     </mat-card-actions>

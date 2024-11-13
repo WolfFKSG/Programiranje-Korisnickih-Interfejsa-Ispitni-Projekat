@@ -3,10 +3,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MovieService } from './service/movie.service';
-import { MovieModel } from './models/movie.model';
+import { MovieService } from '../service/movie.service';
+import { MovieModel } from '../models/movie.model';
 import {MatMenuModule} from '@angular/material/menu';
-import { UserService } from './service/user.service';
+import { UserService } from '../service/user.service';
 import { ProfileComponent } from './profile/profile.component';
 
 

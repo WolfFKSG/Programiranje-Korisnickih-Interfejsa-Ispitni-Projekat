@@ -6,11 +6,11 @@ import { NgFor, NgIf } from '@angular/common';
 import { MatCardModule} from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
-import { MovieService } from '../service/movie.service';
-import { MovieModel } from '../models/movie.model';
+import { MovieService } from '../../service/movie.service';
+import { MovieModel } from '../../models/movie.model';
 import { MatCardImage } from '@angular/material/card';
 import { SearchContainerComponent } from "../search-container/search-container.component";
-import { UserService } from '../service/user.service';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-home',
@@ -22,17 +22,15 @@ import { UserService } from '../service/user.service';
 export class HomeComponent{
 
   public movies: MovieModel[]
+  public userService: UserService
 
-  constructor(private movieService: MovieService, private userService: UserService) {
+  constructor(private movieService: MovieService) {
     this.movies = this.movieService.dummyMovieList
+    this.userService = UserService.getInstance()
   }
 
   public generateImageUrl(id: number) {
     return `/assets/images/${id}.png`
   }
 
-  public bookMovie(movie: MovieModel) {
-    this.userService.addToBooked(movie);
-  }
-  
 }

@@ -5,7 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MovieService } from '../service/movie.service';
+import { MovieService } from '../../service/movie.service';
 
 
 

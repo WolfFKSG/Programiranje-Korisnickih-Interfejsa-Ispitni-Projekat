@@ -1,14 +1,14 @@
 import { NgIf } from '@angular/common';
 import { Component, inject, OnInit, ViewChild } from '@angular/core';
-import { UserService } from '../service/user.service';
+import { UserService } from '../../service/user.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { BookedModel, ReviewModel, UserModel } from '../models/user.model';
+import { BookedModel, ReviewModel, UserModel } from '../../models/user.model';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieService } from '../service/movie.service';
+import { MovieService } from '../../service/movie.service';
 
 @Component({
   selector: 'app-profile',

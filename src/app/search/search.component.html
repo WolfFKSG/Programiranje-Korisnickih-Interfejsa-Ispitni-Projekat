@@ -44,7 +44,7 @@
                         <a routerLink="/movie/{{element.id}}" mat-button>
                             <i class="fa-solid fa-circle-info"></i> Details
                         </a>
-                        <a mat-button [routerLink]="['/book/',element.id]">
+                        <a mat-button (click)="userService.bookMovie(element)">
                             <i class="fa-solid fa-up-right-from-square"></i> Book now
                         </a>
                     </td>
