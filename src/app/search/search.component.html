@@ -3,7 +3,7 @@
     <mat-card appearance="outlined" *ngIf="dataSource">
         <mat-card-content>
             <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
-
+                
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Movie Name </th>
                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>

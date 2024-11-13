@@ -84,7 +84,7 @@ public getMovieName(movie: MovieModel){
   return movie.name
 }
 
-public getSpecificSearchMovie(name: string): Observable<{content: MovieModel[]}> {
+public getSpecificSearchMovie(name: any): Observable<{content: MovieModel[]}> {
   const specmov = this.dummyMovieList.filter(
     movie => movie.name == name)
   return of ({
@@ -113,6 +113,39 @@ public saveSearchCriteria(search: SearchModel) {
   sessionStorage.setItem('search', JSON.stringify(search))
 }
 
+public getMoviesByCriteria(criteria: SearchModel): Observable<{ content: MovieModel[] }> {
+  const filteredMovies = this.dummyMovieList.filter(movie => {
+    let matches = true;
+
+    if (criteria.name && !movie.name.includes(criteria.name)) {
+      matches = false;
+    }
+    if (criteria.genre && !movie.genre.some(genre => genre.includes(criteria.genre!))) {
+      matches = false;
+    }
+    if (criteria.duration && !movie.duration.includes(criteria.duration)) {
+      matches = false;
+    }
+    if (criteria.director && !movie.director.includes(criteria.director)) {
+      matches = false;
+    }
+    if (criteria.actor && !movie.actor.some(actor => actor.includes(criteria.actor!))) {
+      matches = false;
+    }
+    if (criteria.release && movie.releasedAt !== criteria.release) {
+      matches = false;
+    }
+    if (criteria.starts && movie.startsAt !== criteria.starts) {
+      matches = false;
+    }
+    if (criteria.rating && movie.rating !== criteria.rating) {
+      matches = false;
+    }
+    return matches;
+  });
+
+  return of({ content: filteredMovies });
+}
 
 public dummyMovieList: Array<MovieModel> = [
   {

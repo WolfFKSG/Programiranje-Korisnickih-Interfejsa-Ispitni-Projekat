@@ -11,8 +11,11 @@
   <span class="example-spacer"></span>
   <a routerLink="/" mat-button>Home</a>
   <a routerLink="/search" mat-button>Search</a>
-  <a routerLink="/profile" mat-button>Profile</a>
-  <a routerLink="/cart" mat-button>Cart</a>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/profile">Profile</button>
+  <button mat-menu-item routerLink="/cart">Cart</button>
+</mat-menu>
   <a routerLink="/about" mat-button>About</a>
 </mat-toolbar>
 

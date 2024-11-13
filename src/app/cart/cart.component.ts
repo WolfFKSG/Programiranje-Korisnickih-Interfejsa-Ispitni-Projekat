@@ -10,6 +10,7 @@ import { MovieService } from '../service/movie.service';
 import { NgIf } from '@angular/common';
 import { OnInit, ViewChild } from '@angular/core';
 import { UserService } from '../service/user.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-cart',

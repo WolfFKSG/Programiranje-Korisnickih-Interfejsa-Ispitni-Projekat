@@ -51,12 +51,6 @@ export class SearchContainerComponent implements OnInit{
   ngOnInit() {
     this.movieList =  this.movieService.getAllMovies().map(movie => movie.name)
     }
-  
-  
-  // ngOnInit(): void {
-  //   this.movieService.getSpecificMovie().subscribe()
-  
-  // }
 
   public doSearch() {
     this.movieService.saveSearchCriteria({

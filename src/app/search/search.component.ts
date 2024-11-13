@@ -33,6 +33,7 @@ export class SearchComponent implements OnInit{
     const criteria = this.movieService.getSearchCriteria()
     if (criteria.name)
       this.loadTableData(criteria.name)
+    this.doSearch()
   }
 
   public displayedColumns: string[] = ['name' ,'genre' ,'director', 'actor', 'duration', 'release', 'starts', 'rating', 'action' ];
@@ -43,21 +44,21 @@ export class SearchComponent implements OnInit{
 
   public doSearch() {
     const criteria = this.movieService.getSearchCriteria()
-    if (criteria.name == null) {
+    if (!criteria.name && !criteria.genre && !criteria.duration && !criteria.director && !criteria.actor && !criteria.release && !criteria.starts && !criteria.rating) {
       // @ts-ignore
       Swal.fire({
-        title: 'No movie?',
-        text: 'Make sure to select the movie first',
+        title: 'No search critearia selected!',
+        text: 'Please select at least one search criteria',
         icon: 'error',
         confirmButtonText: 'I understand'
       })
       return
     }
-    this.loadTableData(criteria.name)
+    this.loadTableData(criteria)
   }
 
-  private loadTableData(mov: string) {
-  this.movieService.getSpecificSearchMovie(mov).subscribe(rsp => {
+  private loadTableData(mov: any) {
+  this.movieService.getMoviesByCriteria(mov).subscribe(rsp => {
     this.data = rsp
     this.dataSource = new MatTableDataSource<MovieModel>(rsp.content);
     this.dataSource.paginator = this.paginator;
