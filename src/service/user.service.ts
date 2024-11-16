@@ -40,8 +40,10 @@ export class UserService {
     }
 
     return JSON.parse(json!);
+
   }
 
+  
   public createUser(model: UserModel) {
     const arr = this.retrieveAllUsers();
     if (arr.find((user) => user.email === model.email))

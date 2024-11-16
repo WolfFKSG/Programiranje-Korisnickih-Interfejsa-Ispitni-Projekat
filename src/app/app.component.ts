@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -20,14 +20,10 @@ import { ProfileComponent } from './profile/profile.component';
 export class AppComponent{
   title = 'programiranje-korisnickih-interfejsa-ispitni-projekat';
 
-  private userService: UserService
-  public totalPrice: number 
   public movies: MovieModel[];
 
   constructor(private movieService: MovieService) {
     this.movies = this.movieService.dummyMovieList
-    this.userService = UserService.getInstance()
-    this.totalPrice = this.userService.calculatePrice()
-  }
+    }
 
 }
